@@ -1,0 +1,42 @@
+--Auteur : Eya Zaoui, RT2-1, Avril 2020
+--Email: Eya.Zaoui@insat.u-carthage.tn
+--Version : 2.0 , Juin 2020
+
+Projet Java de communication socket Client-Serveur, avec implementation de Base de Données.
+
+Ce projet consiste à créer une application cliente, qui prend en entrée de données un ID etudiant. Celui-ci est envoyé
+au serveur. Le serveur cherche une correspondance dans la BD, et renvoie ses informations au client.
+
+
+ ---------- COMMENT CA MARCHE ----------
+ 
+ - Assurez-vous de lancer le programme serveur en premier. Pour cela, nous recommandons de le lancer via la ligne  de commande CMD par:
+   java -jar ServerApp.jar 
+   Ceci vous permet de voir des commentaires du coté serveur en CMD, comme le contenu de la BD. Sinon, le serveur se met en marche
+   par simple clic sur le fichier ServerApp.jar, vous n'aurez aucun signal.
+ - Cliquez sur ClientApp.jar pour lancer le programme client. Vous aurez un message sur l'interface si le serveur n'est pas en marche,
+   sinon tout va bien.
+
+ NB IMPORTANT: Depuis Drive, veillez télecharger tout le dossier "ProjetTeleinfo_EyaZaoui" (et non pas fichier par fichier).
+ 
+
+
+ --------- TROUBLESHOOTING -------------
+ - Assurez-vous d'avoir la dernière version du JRE installée et indiquée dans le variable d'environnement PATH. (JRE +13) 
+Liens utiles: https://openjdk.java.net/ , https://javatutorial.net/set-java-home-windows-10 (les dernières versions JDK contiennent le JRE)
+ - Si vous avez plusieurs version de JRE installées, indiquez la plus  récente dand la variable JAVAHOME du PATH (voir lien ci-dessous).
+   Si des problèmes persistent, veillez desinstaller les versions antérieures, reinstaller la dernière version du JRE et l'indiquer dans
+   le PATH.
+ - Si le programme n'est pas lancé par simple clic, il doit etre lancer via CMD par l'instruction:
+   java -jar fichier.jar.
+   Cela peut arriver à cause de conflit avec des programmes de compression (zip/winrar) qui essaye d'ouvrir le fichier au lieu d'etre executé
+   par le JRE.
+Lien QuickFix: http://johann.loefflmann.net/en/software/jarfix/index.html
+
+
+
+--------NOTES SUR MAJ DE LA 2eme VERSION------
+ - La BD etait faite avec MySQL , qui posait des difficultés d'execution puisqu'il faudrait importer la BD sur un MySQL Server
+   et verifier qu'il est en marche sur la bonne adresse.
+   Maintenant, la BD est elaborée avec SQLite, qui lit la BD automatiquement comme un fichier, sans besoin de faire quoi que ce soit.
+ - Le projet est convertit en fichiers JAR executables, au lieu de l'ouvrir via un IDE.
